@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style.css" />
+  <title>finesauces</title>
+</head>
+
+<body>
+  <div class="container_body">
+    <!-- START HERE -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top py-1" id="main-nav">
+      <div class="container">
+        <a href="" class="navbar-brand">
+          <h3 class="font-weight-bold">finesauces</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link text-white"><i class="fas fa-user"></i> peter@vought.tech</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-white"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="" class="nav-link text-white">
+                <i class="fas fa-shopping-cart"></i>
+                $<span id="cart_price">24.99</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BODY -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-3">
+            <div class="card shadow-custom border-0">
+              <h4 class="p-3 font-weight-bold text-grey">Categories</h4>
+              <ul class="list-group border-0 categories_list">
+                <li class="list-group-item border-0 p-0 selected">
+                  <a href="" class="btn btn-block text-left">All</a>
+                </li>
+
+                <li class="list-group-item border-0 p-0 unselected">
+                  <a href="" class="btn btn-block text-left">Mild</a>
+                </li>
+                <li class="list-group-item border-0 p-0 unselected">
+                  <a href="" class="btn btn-block text-left">Extreme</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card shadow-custom border-0 mb-4">
+              <div class="card-body text-center">
+                <h2 class="font-weight-bold text-grey">Our products</h2>
+                <div class="bottom_line"></div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-sm-6">
+                <div class="card product">
+                  <div class="item">
+                    <div class="item-image">
+                      <img src="../../img/orange-habanero-mash.jpg" alt="" class="img-fluid rounded-0" />
+                    </div>
+                    <div class="item-text">
+                      <div class="item-text-wrap">
+                        <a href="detail.html" class="h2 text-white text-decoration-none">
+                          <i class="fas fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="card-body text-center">
+                      Sauce-1
+                      <hr />
+                      <span class="cena">$4.99</span>
+                      <div><i class="fas fa-fire"></i> 100,000 SHU</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card product">
+                  <div class="item">
+                    <div class="item-image">
+                      <img src="../../img/komodo-dragon-mash.jpg" alt="" class="img-fluid rounded-0" />
+                    </div>
+                    <div class="item-text">
+                      <div class="item-text-wrap">
+                        <a href="detail.html" class="h2 text-white text-decoration-none">
+                          <i class="fas fa-search-plus"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="card-body text-center">
+                      Sauce-2
+                      <hr />
+                      <span class="cena">$6.99</span>
+                      <div><i class="fas fa-fire"></i> 600,000 SHU</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+        <hr />
+      </div>
+    </section>
+  </div>
+  <script src="../../js/jquery-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="../../js/scripts.js"></script>
+  <script>
+    // init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+  <script src="../../js/materialize.js"></script>
+</body>
+
+</html>

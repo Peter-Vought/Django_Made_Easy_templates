@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style.css" />
+  <title>finesauces</title>
+</head>
+
+<body>
+  <div class="container_body">
+    <!-- START HERE -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top py-1" id="main-nav">
+      <div class="container">
+        <a href="" class="navbar-brand">
+          <h3 class="font-weight-bold">finesauces</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link text-white"><i class="fas fa-user"></i> peter@vought.tech</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-white"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="" class="nav-link text-white">
+                <i class="fas fa-shopping-cart"></i>
+                $<span id="cart_price">24.99</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BODY -->
+    <section class="py-5">
+      <div class="container">
+        <div class="card shadow-custom border-0 col-lg-8 mx-auto">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <img src="../../img/orange-habanero-mash.jpg" alt="" class="img-fluid rounded-0" />
+            </div>
+            <div class="col-lg-6">
+              <div>
+                <h2 class="mt-4 font-weight-bold text-grey">Sauce-1</h2>
+                <div>
+                  <span class="font-weight-bold text-grey">Hotness:</span>
+                  100,000 SHU
+                </div>
+                <div>
+                  <span class="font-weight-bold text-grey">Volume:</span>
+                  100ml
+                </div>
+              </div>
+              <div class="text-justify mt-3">
+                Marzipan muffin cookie dessert soufflé candy canes. Sweet
+                macaroon danish oat cake wafer soufflé. Chocolate cake cupcake
+                cotton candy. Sesame snaps soufflé marzipan dessert. Cookie
+                sweet roll liquorice.
+              </div>
+              <div class="alert alert-success my-3 text-center">
+                Available
+              </div>
+              <hr />
+              <div class="review">
+                <span class="font-weight-bold text-grey">Average rating: 4.5/5.0</span>
+                <div class="mb-3 font-weight-bold">
+                  <a href="" class="text-warning" data-toggle="modal" data-target="#myModal">
+                    Write review
+                  </a>
+                </div>
+              </div>
+              <div class="mb-4">
+                <form action="">
+                  <span class="input-group add-to-cart shadow-custom">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text font-weight-bold px-3 btn btn-block price">
+                        $4.99
+                      </span>
+                    </div>
+                    <span id="minus" class="input-group-text button_minus px-4">-
+                    </span>
+                    <input type="number" name="quantity" class="form-control text-center px-3" value="1" min="1"
+                      required="" id="id_quantity" />
+                    <span id="plus" class="input-group-text button_plus px-4">
+                      +
+                    </span>
+                    <div class="input-group-append">
+                      <button class="btn btn-danger px-4 reduce_padding" type="submit" data-toggle="tooltip"
+                        data-placement="top" title="Add to cart">
+                        <i class="fas fa-shopping-cart"></i>
+                      </button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="col-7 mx-auto" />
+        <div class="card shadow-custom border-0 col-lg-8 mx-auto mb-3">
+          <h3 class="py-2 text-grey">Reviews:</h3>
+
+          <span class="font-weight-bold py-2 text-grey">Peter - 5/5 - Sept. 19, 2020</span>
+          <span class="text-justify pb-2"> tastes like 🔥!! </span>
+          <hr />
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Write your review</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <form method="post">
+            <div class="modal-body">
+              <div class="bg-grey">
+                <div class="text-center pt-2">
+                  Rating:
+                  <div id="full-stars" class="d-inline text-center">
+                    <div class="rating-group">
+                      <label class="rating__label" for="id_rating_0">
+                        <i class="rating__icon rating__icon--star fa fa-star"></i>
+                      </label>
+                      <input class="rating__input" name="rating" id="id_rating_0" value="1" type="radio" required>
+
+                      <label class="rating__label" for="id_rating_1">
+                        <i class="rating__icon rating__icon--star fa fa-star"></i>
+                      </label>
+                      <input class="rating__input" name="rating" id="id_rating_1" value="2" type="radio" required>
+
+                      <label class="rating__label" for="id_rating_2">
+                        <i class="rating__icon rating__icon--star fa fa-star"></i>
+                      </label>
+                      <input class="rating__input" name="rating" id="id_rating_2" value="3" type="radio" required>
+
+                      <label class="rating__label" for="id_rating_3">
+                        <i class="rating__icon rating__icon--star fa fa-star"></i>
+                      </label>
+                      <input class="rating__input" name="rating" id="id_rating_3" value="4" type="radio" required>
+
+                      <label class="rating__label" for="id_rating_4">
+                        <i class="rating__icon rating__icon--star fa fa-star"></i>
+                      </label>
+                      <input class="rating__input" name="rating" id="id_rating_4" value="5" type="radio" checked
+                        required>
+                    </div>
+                  </div>
+                </div>
+                <hr class="m-0">
+                <div class="input-field text-center p-2">
+                  <textarea name="description" cols="40" rows="6" class="form-control shadow px-2"
+                    id="id_description"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" type="submit">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/jquery-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="../../js/scripts.js"></script>
+  <script>
+    // init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+  <script src="../../js/materialize.js"></script>
+</body>
+
+</html>

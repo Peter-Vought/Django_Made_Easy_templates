@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../css/style.css" />
+  <title>finesauces</title>
+</head>
+
+<body>
+  <div class="container_body">
+    <!-- START HERE -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top py-1" id="main-nav">
+      <div class="container">
+        <a href="" class="navbar-brand">
+          <h3 class="font-weight-bold">finesauces</h3>
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="" class="nav-link text-white"><i class="fas fa-user"></i> peter@vought.tech</a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link text-white"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="" class="nav-link text-white">
+                <i class="fas fa-shopping-cart"></i>
+                $<span id="cart_price">24.99</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BODY -->
+    <section class="py-5">
+      <div class="container">
+        <div class="card shadow-custom border-0 col-lg-7 mx-auto mb-3">
+          <h3 class="py-2 font-weight-bold text-grey text-center">
+            Delivery information:
+          </h3>
+
+          <form method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-field">
+                  <label class="text-muted">First name</label>
+                  <input type="text" name="first_name" value="" class="form-control" maxlength="50" required=""
+                    id="id_first_name" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-field">
+                  <label class="text-muted">Last name</label>
+                  <input type="text" name="last_name" class="form-control" maxlength="50" required=""
+                    id="id_last_name" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-field">
+                  <label class="text-muted">Email</label>
+                  <input type="text" name="email" value="" class="form-control" maxlength="254" required=""
+                    id="id_email" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-field">
+                  <label class="text-muted">Phone number</label>
+                  <input type="text" name="telephone" value="" class="form-control" maxlength="20" required=""
+                    id="id_telephone" />
+                </div>
+              </div>
+            </div>
+
+            <hr class="mt-0" />
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-field">
+                  <label class="text-muted">Address</label>
+                  <input type="text" name="address" value="" class="form-control" maxlength="250" required=""
+                    id="id_address" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-field">
+                  <label class="text-muted">Postal code</label>
+                  <input type="text" name="postal_code" value="" class="form-control" maxlength="20" required=""
+                    id="id_postal_code" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-field mb-0">
+                  <label class="text-muted">City</label>
+                  <input type="text" name="city" value="" class="form-control" maxlength="100" required=""
+                    id="id_city" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-field mb-0">
+                  <label class="text-muted">Country</label>
+                  <input type="text" name="country" value="" class="form-control px-2" maxlength="100" required=""
+                    id="id_country" />
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <h4 class="py-2 font-weight-bold text-grey text-smol">
+              Transport:
+            </h4>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="radiobtn">
+                  <input type="radio" id="id_transport_0" name="transport" value="Courier delivery" amount="5.99"
+                    checked onclick="setTotalCost()" />
+                  <label for="id_transport_0">Courier delivery
+                    <span class="text-danger float-right pr-3 font-weight-bold">$5.99</span>
+                  </label>
+                </div>
+
+                <div class="radiobtn">
+                  <input type="radio" id="id_transport_1" name="transport" value="Recipient pickup" amount="free"
+                    onclick="setTotalCost()" />
+                  <label for="id_transport_1">Recipient pickup
+                    <span class="text-green float-right pr-3 font-weight-bold">free</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4" />
+
+            <div class="input-field">
+              <textarea name="note" cols="40" rows="1" class="form-control" id="id_note"></textarea>
+              <label class="text-muted">Note</label>
+            </div>
+
+            <h4 class="py-2 font-weight-bold text-grey text-smol">
+              Price total:
+              <span id="order-total" class="text-danger float-right"></span>
+            </h4>
+          </form>
+        </div>
+
+        <div class="col-lg-7 mx-auto mb-3">
+          <div class="row justify-content-end">
+            <div class="col-lg-8 px-0">
+              <div class="btn-group d-flex">
+                <a href="" class="btn btn-warning shadow-custom col">
+                  Back to shop
+                </a>
+                <button type="submit" class="btn btn-danger shadow-custom col">
+                  Create order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="../../js/jquery-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="../../js/scripts.js"></script>
+  <script>
+    // init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  </script>
+  <script src="../../js/materialize.js"></script>
+</body>
+
+</html>
